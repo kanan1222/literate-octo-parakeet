@@ -1,0 +1,17 @@
+- nome: Cache
+  usa: ações/cache@v3.3.2
+  com:
+    # Uma lista de arquivos, diretórios e padrões curinga para armazenar em cache e restaurar
+    caminho:
+    # Uma chave explícita para restaurar e salvar o cache
+    chave:
+    # Uma lista ordenada de chaves a serem usadas para restaurar o cache obsoleto se nenhuma ocorrência de cache ocorreu para a chave. Observe que `cache-hit` retorna falso neste caso.
+    chaves de restauração: # opcional
+    # O tamanho do bloco usado para dividir arquivos grandes durante o upload, em bytes
+    upload-chunk-size: # opcional
+    # Um booleano opcional quando ativado, permite que os executores do Windows salvem ou restaurem caches que podem ser restaurados ou salvos respectivamente em outras plataformas
+    enableCrossOsArchive: # opcional, o padrão é falso
+    # Falha no fluxo de trabalho se a entrada do cache não for encontrada
+    fail-on-cache-miss: # opcional, o padrão é falso
+    # Verifica se existe uma entrada de cache para as entradas fornecidas (chave, chaves de restauração) sem baixar o cache
+    somente pesquisa: # opcional, o padrão é falso
